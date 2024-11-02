@@ -10,7 +10,7 @@ public class Product {
     private String description;
     private CategoryAnimalEnum categoryAnimal;
 
-    public Product(Integer id, String name, Double price, String description, Integer quantity) {
+    public Product(Integer id, String name, Double price, String description) {
         this.id = id;
         this.name = name;
         this.price = price;

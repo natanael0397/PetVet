@@ -3,8 +3,8 @@ package Model;
 public class Feed extends Product {
     private Integer weight;
 
-    public Feed(Integer id, String name, Double price, String description, Integer quantity, Integer weight) {
-        super(id, name, price, description, quantity);
+    public Feed(Integer id, String name, Double price, String description, Integer weight) {
+        super(id, name, price, description);
         this.weight = weight;
     }
 

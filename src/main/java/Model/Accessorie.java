@@ -4,8 +4,8 @@ public class Accessorie extends Product {
     //ToDo insert "final"?
     private String accessorieType;
 
-    public Accessorie(Integer id, String name, Double price, String description, Integer quantity, String accessorieType) {
-        super(id, name, price, description, quantity);
+    public Accessorie(Integer id, String name, Double price, String description, String accessorieType) {
+        super(id, name, price, description);
         this.accessorieType = accessorieType;
     }
 

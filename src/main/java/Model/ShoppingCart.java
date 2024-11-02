@@ -6,19 +6,13 @@ import java.util.List;
 public class ShoppingCart {
     private Integer id;
 
-    private String name;
-
-    private Double quantity;
-
     private Double totalValue;
     private Customer customer;
     public List<Product> products;
 
-    public ShoppingCart(String name, Integer id, Double quantity, Double totalValue, Customer customer) {
-        this.name = name;
+    public ShoppingCart( Integer id, Customer customer) {
         this.id = id;
-        this.quantity = quantity;
-        this.totalValue = totalValue;
+        this.totalValue = 0d;
         this.products = new ArrayList<>();
         this.customer = customer;
     }
@@ -26,22 +20,12 @@ public class ShoppingCart {
 
     public void addToCart(Product product) {
         this.products.add(product);
+        totalValue =totalValue+product.getPrice();
     }
 
     public void removeToCart(Product product) {
         this.products.remove(product);
-    }
-
-
-
-
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        totalValue =totalValue-product.getPrice();
     }
 
     public Integer getId() {
@@ -52,13 +36,10 @@ public class ShoppingCart {
         this.id = id;
     }
 
-    public Double getQuantity() {
-        return quantity;
+    public Integer getQuantity() {
+        return this.products.size();
     }
 
-    public void setQuantity(Double quantity) {
-        this.quantity = quantity;
-    }
 
     public Double getTotalValue() {
         return totalValue;

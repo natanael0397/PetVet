@@ -3,8 +3,8 @@ package Model;
 public class Medication extends Product {
     private Double milligrams;
 
-    public Medication(Integer id, String name, Double price, String description, Integer quantity, Double milligrams) {
-        super(id, name, price, description, quantity);
+    public Medication(Integer id, String name, Double price, String description,Double milligrams) {
+        super(id, name, price, description);
         this.milligrams = milligrams;
     }
 
