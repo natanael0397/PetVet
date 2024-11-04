@@ -60,6 +60,9 @@ public class Main {
 
                 case 5:
                     control = 5;
+                    connection.closeConnection();
+                    break;
+
 
             }
         }
@@ -90,6 +93,12 @@ public class Main {
         productDAO.insert(new Feed("Pedigree Food Dog",25.00,"Food for dogs",CategoryAnimalEnum.DOG,30));
         productDAO.insert(new Medication("Meloxican",65.00,"Antiflamatory for animals",CategoryAnimalEnum.CAT,0.500));
         productDAO.insert(new Medication("Mellanil",95.00,"Antiflamatory for animals",CategoryAnimalEnum.DOG,1.500));
+        productDAO.insert(new Accessorie("Artificial bone", 18.00, "Durable artificial bone", CategoryAnimalEnum.DOG, "Toy"));
+        productDAO.insert(new Feed("Pet snacks", 20.00, "Tasty pet snacks", CategoryAnimalEnum.DOG, 40));
+        productDAO.insert(new Accessorie("Teether", 15.00, "Teething toy for puppies", CategoryAnimalEnum.DOG, "Toy"));
+        productDAO.insert(new Accessorie("Plush toy", 10.00, "Soft plush toy", CategoryAnimalEnum.DOG, "Toy"));
+        productDAO.insert(new Accessorie("Frisbee", 12.00, "Flying disc for dogs", CategoryAnimalEnum.DOG, "Toy"));
+
 
     }
 }
