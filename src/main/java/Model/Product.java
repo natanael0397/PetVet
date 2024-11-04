@@ -18,6 +18,13 @@ public class Product {
 
     }
 
+    public Product(String name, Double price, String description, CategoryAnimalEnum categoryAnimal) {
+        this.name = name;
+        this.price = price;
+        this.description = description;
+        this.categoryAnimal = categoryAnimal;
+    }
+
     public String describe(){
         return getDescription();
     }
@@ -60,5 +67,14 @@ public class Product {
         this.description = description;
     }
 
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                ", description='" + description + '\'' +
+                ", categoryAnimal=" + categoryAnimal +
+                '}';
+    }
 }
