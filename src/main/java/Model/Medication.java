@@ -1,10 +1,17 @@
 package Model;
 
+import Model.Enum.CategoryAnimalEnum;
+
 public class Medication extends Product {
     private Double milligrams;
 
     public Medication(Integer id, String name, Double price, String description,Double milligrams) {
         super(id, name, price, description);
+        this.milligrams = milligrams;
+    }
+
+    public Medication(String name, Double price, String description, CategoryAnimalEnum categoryAnimal, Double milligrams) {
+        super(name, price, description, categoryAnimal);
         this.milligrams = milligrams;
     }
 

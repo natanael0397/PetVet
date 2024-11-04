@@ -10,13 +10,24 @@ public class ShoppingCart {
     private Customer customer;
     public List<Product> products;
 
-    public ShoppingCart( Integer id, Customer customer) {
-        this.id = id;
+    public ShoppingCart( Customer customer) {
         this.totalValue = 0d;
         this.products = new ArrayList<>();
         this.customer = customer;
     }
 
+    public ShoppingCart(Integer id, Double totalValue, Customer customer) {
+        this.id = id;
+        this.totalValue = totalValue;
+        this.customer = customer;
+    }
+
+    public ShoppingCart(Integer id, Double totalValue, Customer customer, List<Product> products) {
+        this.id = id;
+        this.totalValue = totalValue;
+        this.customer = customer;
+        this.products = products;
+    }
 
     public void addToCart(Product product) {
         this.products.add(product);
@@ -55,5 +66,9 @@ public class ShoppingCart {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
+    }
+
+    public List<Product> getProducts() {
+        return products;
     }
 }
